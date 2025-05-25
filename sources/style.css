@@ -520,6 +520,42 @@ section {
   }
 }
 
+.ticker {
+  padding: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, #000000, #000000);
+  overflow: hidden;
+  padding: 5px 0;
+}
+
+.ticker-inner {
+  display: flex;
+  padding: 5px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: ticker-scroll 20s linear infinite;
+}
+
+.white {
+  color: white;
+  margin-right: 10px;
+}
+
+.Red {
+  color: red; /* or any other blue */
+  margin-right: 10px;
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 /* Section 5 – Tokenomics */
 .tokenomics {
   background: linear-gradient(to bottom, #131313, #1a1a1a);
