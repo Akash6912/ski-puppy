@@ -75,7 +75,7 @@ function autoSlide() {
   }
 }
 
-setInterval(autoSlide, 4000);
+setInterval(autoSlide, 2000);
 
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 768) {
