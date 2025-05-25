@@ -61,21 +61,29 @@ function addTokenToWallet() {
   }
 }
 
-let currentSlide = 0;
+const track = document.getElementById("carouselTrack");
+const items = track.querySelectorAll(".carousel-item");
+let index = 0;
 
-function moveCarousel(direction) {
-  const track = document.getElementById('carousel-track');
-  const items = document.querySelectorAll('.carousel-item');
-  const totalSlides = items.length;
-
-  currentSlide += direction;
-
-  if (currentSlide < 0) currentSlide = totalSlides - 1;
-  if (currentSlide >= totalSlides) currentSlide = 0;
-
-  const offset = currentSlide * -100;
-  track.style.transform = `translateX(${offset}%)`;
+function autoSlide() {
+  if (window.innerWidth < 768) {
+    index = (index + 1) % items.length;
+    const offset = -index * track.clientWidth;
+    track.style.transform = `translateX(${offset}px)`;
+  } else {
+    track.style.transform = "none";
+  }
 }
+
+setInterval(autoSlide, 4000);
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 768) {
+    track.style.transform = "none";
+  }
+});
+
+
 
 function toggleMenu() {
   const nav = document.getElementById("navLinks");

@@ -46,11 +46,11 @@ li,
 
 /* === GRID SECTIONS ALTERNATING BACKGROUND === */
 section:nth-of-type(even) {
-  background: linear-gradient(to bottom, #1a1a1a, #222);
+  
 }
 
 section:nth-of-type(odd) {
-  background: linear-gradient(to bottom, #131313, #1a1a1a);
+  
 }
 
 
@@ -59,7 +59,7 @@ section:nth-of-type(odd) {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #000;
+  background: linear-gradient(to bottom, #131313, #1a1a1a);
   color: white;
   z-index: 999;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
@@ -132,6 +132,7 @@ section {
 
 
 .hero {
+  background: linear-gradient(to bottom, #1a1a1a, #222);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -276,8 +277,7 @@ section {
 
 /* Section 2: Legacy & Heritage */
 .legacy {
-  background: url('images/hero.jpg') no-repeat center center;
-  background-size:contain;
+  background: linear-gradient(to bottom, #131313, #1a1a1a);
   padding: 4rem 2rem;
   position: relative;
 }
@@ -361,7 +361,7 @@ section {
 /* Section 3: The Watcher */
 .watcher {
   height: 100vh;
-  background-image: url('your-dark-alley.jpg');
+  background-image: url('../assets/dog-chosen.jpg');
   background-size: cover;
   background-attachment: fixed; /* Creates parallax */
   background-position: center;
@@ -428,7 +428,7 @@ section {
 
 /* Section 4 – Dog God’s Chosen */
 .dog-god {
-  background: radial-gradient(ellipse at center, #0b0b0b 0%, #000 100%);
+  background: linear-gradient(to bottom, #1a1a1a, #222);
   padding: 80px 20px;
   text-align: center;
   position: relative;
@@ -532,7 +532,7 @@ section {
 
 /* Section 5 – Tokenomics */
 .tokenomics {
-  background-color: #0e0e0e;
+  background: linear-gradient(to bottom, #131313, #1a1a1a);
   color: #fff;
   padding: 80px 20px;
   text-align: center;
@@ -613,96 +613,66 @@ section {
   }
 }
 
-/* Section 6 – Comic/Meme Gallery */
-.comic-gallery {
-  background-color: #121212;
+.comic-gallery-section {
+  background: linear-gradient(to bottom, #1a1a1a, #222);
+  padding: 60px 20px;
+  text-align: center;
   color: white;
-  padding: 80px 20px;
+}
+
+.section-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.carousel-container {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Container holding the entire track */
+.carousel-wrapper {
   overflow: hidden;
+  width: 100%;
+  position: relative;
 }
 
+/* Flex row container for images */
 .carousel-track {
   display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
 }
 
+/* Individual image wrapper */
 .carousel-item {
-  min-width: 100%;
-  flex-shrink: 0;
+  flex: 0 0 100%;
+  padding: 0 10px;
 }
 
 .carousel-item img {
   width: 100%;
+  height: auto;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
-  object-fit: contain;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* Carousel buttons */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  background: rgba(0, 0, 0, 0.6);
-  border: none;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%;
-}
-
-.carousel-btn.left {
-  left: 10px;
-}
-
-.carousel-btn.right {
-  right: 10px;
-}
-
-/* Desktop Grid View */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .carousel-item {
-    min-width: calc(45% - 20px);
-    max-width: calc(45% - 20px);
-  }
-}
-
+/* 3-column grid layout for larger screens */
 @media (min-width: 768px) {
-  .carousel-container {
-    overflow: visible;
-  }
-
   .carousel-track {
     flex-wrap: wrap;
     justify-content: center;
     transform: none !important;
-    gap: 20px;
   }
 
   .carousel-item {
-    min-width: calc(33.333% - 20px);
+    flex: 0 0 calc(33.333% - 20px);
     max-width: calc(33.333% - 20px);
-    flex: 1 0 auto;
-  }
-
-  .carousel-btn {
-    display: none;
+    padding: 10px;
   }
 }
 
+
+
 /* Section 7 – Join the Rebellion */
 .join-rebellion {
-  background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+  background: linear-gradient(to bottom, #131313, #1a1a1a);
   color: #fff;
   padding: 80px 20px;
   text-align: center;
