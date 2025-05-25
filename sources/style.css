@@ -44,16 +44,6 @@ li,
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
-/* === GRID SECTIONS ALTERNATING BACKGROUND === */
-section:nth-of-type(even) {
-  
-}
-
-section:nth-of-type(odd) {
-  
-}
-
-
 /* Navbar */
 .navbar {
   position: fixed;
